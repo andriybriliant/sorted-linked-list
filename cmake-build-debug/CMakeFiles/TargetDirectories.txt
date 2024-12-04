@@ -1,3 +1,3 @@
-F:/Studying/Computer Science/Second year/First semester/Data Structures And Algorithms/Laboratory/Sorted_l/cmake-build-debug/CMakeFiles/Circular_l.dir
-F:/Studying/Computer Science/Second year/First semester/Data Structures And Algorithms/Laboratory/Sorted_l/cmake-build-debug/CMakeFiles/edit_cache.dir
-F:/Studying/Computer Science/Second year/First semester/Data Structures And Algorithms/Laboratory/Sorted_l/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/andriibryliant/CLionProjects/sorted-linked-list/cmake-build-debug/CMakeFiles/Circular_l.dir
+/Users/andriibryliant/CLionProjects/sorted-linked-list/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/andriibryliant/CLionProjects/sorted-linked-list/cmake-build-debug/CMakeFiles/rebuild_cache.dir

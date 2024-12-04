@@ -17,8 +17,33 @@ void show_menu(){
     printf("0. Wyjdz");
 }
 
+void test() {
+    list l = 0, m = 0;
+    l = malloc(sizeof(sorted));
+    l->key = INT_MAX;
+    l->next = 0;
 
-int main() {
+    m = malloc(sizeof(sorted));
+    m->key = INT_MAX;
+    m->next = 0;
+    add(&l, 2);
+    add(&l, 4);
+    add(&l, 6);
+    add(&l, 9);
+
+    add(&m, 2);
+    add(&m, 5);
+    add(&m, 7);
+    add(&m, 9);
+
+    return_two_lists ret = compare_two_lists(l, m);
+    printf("List p\n");
+    show(ret.first);
+    printf("List q\n");
+    show(ret.second);
+}
+
+void main_func() {
     list l = 0, m = 0;
     int user_input = 0, target = 0;
 
@@ -81,15 +106,20 @@ int main() {
                     scanf("%d", &target);
                     add(&m, target);
                 }
-                connect_two_lists(&l, &m);
+                //connect_two_lists(&l, &m);
+            return_two_lists ret = compare_two_lists(l, m);
                 printf("Lista polaczona: \n");
-                show(l);
+                show(ret.first);
                 break;
             case 0:
-                return 0;
+                return;
         }
     }
 
+}
+
+int main() {
+    test();
 
     return 0;
 }

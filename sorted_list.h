@@ -8,6 +8,11 @@ typedef struct sorted_list {
     struct sorted_list* next;
 } sorted;
 
+typedef struct return_two_lists {
+    sorted* first;
+    sorted* second;
+} return_two_lists;
+
 typedef sorted* list;
 
 void show(list);
@@ -20,3 +25,4 @@ int get_last_element(list*);
 void delete_list(list*);
 void read_from_a_file(list*);
 void connect_two_lists(list*, list*);
+return_two_lists compare_two_lists(list, list);

@@ -1,5 +1,5 @@
-#include <malloc.h>
 #include "sorted_list.h"
+#include <stdlib.h>
 
 void show(list l){
     list temp = l;
@@ -163,4 +163,50 @@ void connect_two_lists(list* p, list* q){
 
     *q = NULL;
 
+}
+
+
+return_two_lists compare_two_lists(list p, list q) {
+    list p_not_q = malloc(sizeof(sorted));
+    list q_not_p = malloc(sizeof(sorted));
+    p_not_q->key = INT_MAX;
+    p_not_q->next = 0;
+
+    q_not_p->key = INT_MAX;
+    q_not_p->next = 0;
+
+    if(p == NULL) {
+        p_not_q = q;
+        q_not_p = q;
+    }
+
+    if(q == NULL) {
+        q_not_p = p;
+        p_not_q = p;
+    }
+
+    while (p) {
+        list temp_q = q;
+        while (temp_q) {
+            if (temp_q->key == p->key) {
+                remove_found(&q, p->key);
+                remove_found(&p, p->key);
+                break;
+            }
+            if (temp_q->key < p->key) {
+                temp_q = temp_q->next;
+            }
+            else {
+                add(&p_not_q, p->key);
+                p = p->next;
+                break;
+            }
+        }
+    }
+
+    q_not_p = q;
+    return_two_lists ret;
+    ret.first = p_not_q;
+    ret.second = q_not_p;
+    return  ret;
 }
